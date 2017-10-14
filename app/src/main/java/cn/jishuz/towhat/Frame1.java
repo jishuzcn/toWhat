@@ -123,7 +123,7 @@ public class Frame1 extends Fragment {
 					to = "es";
 				}
 				if (quer.equals("")) {
-					Toast.makeText(getActivity(), "请输入汉字...", Toast.LENGTH_SHORT).show();
+					Toast.makeText(getActivity(), "请输入文字...", Toast.LENGTH_SHORT).show();
 				} else {
 					new Thread(askForYouDao).start();
 				}
@@ -221,7 +221,7 @@ public class Frame1 extends Fragment {
 				params.put("salt", salt);
 				params.put("appKey", appKey);
 				String url_path = getUrlWithQueryString("https://openapi.youdao.com/api", params);
-				System.out.println(url_path);
+//				System.out.println(url_path);
 				/*
 				 * String url_path = "http://fanyi.youdao.com/openapi.do?keyfrom=" + clientID +
 				 * "&key=" + clientSecret + "&type=data&doctype=json&version=1.1&q=" +

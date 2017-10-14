@@ -61,7 +61,7 @@ public class Frame3 extends Fragment implements OnClickListener{
 		Bundle bundle = getArguments();//从activity传过来的Bundle
 		if(bundle!=null){
 			input = bundle.getString("str");
-			if (isContainChinese(input)) {// 如果输入的是中文
+			if (isContainChinese(input)) {// 如果传入的是汉字
 				new Thread(getResult1).start();
 			} else {
 				new Thread(getResult2).start();
@@ -76,17 +76,12 @@ public class Frame3 extends Fragment implements OnClickListener{
 				if (input.equals("")) {
 					Toast.makeText(getActivity(), "请不要输入空字符..", Toast.LENGTH_LONG).show();
 				} else {
-					if (isContainChinese(input)) {// 如果输入的是中文
+					if (isContainChinese(input)) {// 如果输入的是汉字
 						new Thread(getResult1).start();
 					} else {
 						new Thread(getResult2).start();
 					}
 				}
-				/*
-				 * JuheApi Juhe = new JuheApi(); if (vd(input)) { String s = (String)
-				 * Juhe.getResult(); res.setText(s); } else { Juhe.getResult(); }
-				 */
-
 			}
 		});
 
@@ -96,250 +91,14 @@ public class Frame3 extends Fragment implements OnClickListener{
 
 	@Override
 	public void onClick(View v) {
-		// TODO Auto-generated method stub
-		switch (v.getId()) {
-			case R.id.btn1:
-				input = "丨";
+		// 这个for循环有点浪费系统资源,但是如果用switch的话代码就太过冗长
+		for(int i = 0;i<btn.length;i++){
+			int id = getResources().getIdentifier("btn"+(i+1),"id", getActivity().getPackageName());
+			if(v.getId() == id){
+				input = btn[i].getText().toString();
 				new Thread(getResult3).start();
 				break;
-			case R.id.btn2:
-				input = "亅";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn3:
-				input = "丿";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn4:
-				input = "乛";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn5:
-				input = "一";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn6:
-				input = "乙";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn7:
-				input = "乚";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn8:
-				input = "丶";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn9:
-				input = "八";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn10:
-				input = "勹";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn11:
-				input = "匕";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn12:
-				input = "冫";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn13:
-				input = "卜";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn14:
-				input = "厂";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn15:
-				input = "刀";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn16:
-				input = "刂";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn17:
-				input = "儿";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn18:
-				input = "二";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn19:
-				input = "匚";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn20:
-				input = "阝";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn21:
-				input = "丷";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn22:
-				input = "几";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn23:
-				input = "卩";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn24:
-				input = "冂";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn25:
-				input = "力";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn26:
-				input = "冖";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn27:
-				input = "凵";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn28:
-				input = "人";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn29:
-				input = "亻";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn30:
-				input = "入";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn31:
-				input = "十";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn32:
-				input = "厶";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn33:
-				input = "亠";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn34:
-				input = "匸";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn35:
-				input = "讠";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn36:
-				input = "廴";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn37:
-				input = "又";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn38:
-				input = "艹";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn39:
-				input = "屮";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn40:
-				input = "彳";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn41:
-				input = "巛";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn42:
-				input = "川";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn43:
-				input = "辶";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn44:
-				input = "寸";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn45:
-				input = "大";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn46:
-				input = "飞";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn47:
-				input = "干";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn48:
-				input = "工";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn49:
-				input = "弓";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn50:
-				input = "廾";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn51:
-				input = "广";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn52:
-				input = "己";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn53:
-				input = "彐";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn54:
-				input = "彑";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn55:
-				input = "巾";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn56:
-				input = "口";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn57:
-				input = "马";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn58:
-				input = "门";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn59:
-				input = "宀";
-				new Thread(getResult3).start();
-				break;
-			case R.id.btn60:
-				input = "女";
-				new Thread(getResult3).start();
-				break;
-			default:
-				break;
+			}
 		}
 	}
 
@@ -473,7 +232,7 @@ public class Frame3 extends Fragment implements OnClickListener{
 				String APPKEY = "7bc4d75806e838b2f1b957121bd9afec";
 				Map<String, String> params = new HashMap<String, String>();// 请求参数
 				params.put("key", APPKEY);// 应用APPKEY(应用详细页查询)
-				params.put("word", input);
+				params.put("word", input);//笔画
 				params.put("dtype", "");// 返回数据的格式,xml或json，默认json
 				params.put("page", "");// 页数，默认1
 				params.put("pageszie", "");// 每页返回条数，默认10 最大50

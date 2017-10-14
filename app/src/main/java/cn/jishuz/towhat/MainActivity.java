@@ -71,19 +71,13 @@ public class MainActivity extends Activity implements View.OnClickListener,View.
             Toast.makeText(this,"网络不可用,请开启网络",Toast.LENGTH_LONG).show();
         }
 
-        /*//判断SDK版本是否大于等于19，大于就让他显示，小于就要隐藏，不然低版本会多出来一个
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            setTranslucentStatus(true);
-            //还有设置View的高度，因为每个型号的手机状态栏高度都不相同
-        }*/
+        recoderDialog = new AudioRecoderDialog(this);
+        recoderDialog.setShowAlpha(0.98f);
 
-            recoderDialog = new AudioRecoderDialog(this);
-            recoderDialog.setShowAlpha(0.98f);
-
-            initView();
-            initEvent();
-            setSelect(0,"");
-            onUpdate();
+        initView();
+        initEvent();
+        setSelect(0,"");
+        onUpdate();
     }
 
     public void onUpdate() {
@@ -106,17 +100,17 @@ public class MainActivity extends Activity implements View.OnClickListener,View.
                 switch(event .getAction()) {
                         case MotionEvent.ACTION_DOWN:
                             PermissionUtils.requestPermission(this, PermissionUtils.CODE_RECORD_AUDIO, mPermissionGrant);
+                            mSpeechRecognizerTool.startASR(MainActivity.this); //bd
+                            downT = System.currentTimeMillis();
+                            recoderDialog.showAtLocation(view, Gravity.CENTER, 0, 0);
+                            say.setBackgroundResource(R.drawable.shape_recoder_btn_recoding);
+                            return true;
 
-                                mSpeechRecognizerTool.startASR(MainActivity.this); //bd
-                                downT = System.currentTimeMillis();
-                                recoderDialog.showAtLocation(view, Gravity.CENTER, 0, 0);
-                                say.setBackgroundResource(R.drawable.shape_recoder_btn_recoding);
-                                return true;
                         case MotionEvent.ACTION_UP:
-                                mSpeechRecognizerTool.stopASR();//bd
-                                recoderDialog.dismiss();
-                                say.setBackgroundResource(R.drawable.shape_recoder_btn_normal);
-                                return true;
+                            mSpeechRecognizerTool.stopASR();//bd
+                            recoderDialog.dismiss();
+                            say.setBackgroundResource(R.drawable.shape_recoder_btn_normal);
+                            return true;
                 }
                 return false;
         }

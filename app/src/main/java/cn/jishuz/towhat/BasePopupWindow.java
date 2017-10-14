@@ -154,7 +154,6 @@ public class BasePopupWindow extends PopupWindow {
         if(mShowAlpha != 1.0f) {
             ValueAnimator animator = ValueAnimator.ofFloat(mShowAlpha, 1.0f);
             animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-
                 @Override
                 public void onAnimationUpdate(ValueAnimator animation) {
                     Object alpha = animation.getAnimatedValue();
