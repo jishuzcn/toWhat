@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal" >
+    
+    <LinearLayout 
+        android:id="@+id/trans_layout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        
+        <TextView 
+            android:id="@+id/trans_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="翻译"
+            android:textColor="@color/gray"/>
+        <ImageButton
+            android:id="@+id/trans_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#00000000"
+            android:clickable="false"
+            android:src="@drawable/tran1"
+            android:layout_marginTop="1dp"/>
+        
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:id="@+id/zhuan_layout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        
+        <TextView 
+            android:id="@+id/zhuan_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="篆体"
+            android:textColor="@color/gray"/>
+        
+        <ImageButton 
+            android:id="@+id/zhuan_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#00000000"
+            android:clickable="false"
+            android:src="@drawable/font1"
+            android:layout_marginTop="1dp"/>
+        </LinearLayout>
+
+    <LinearLayout
+    android:id="@+id/say_layout"
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:layout_marginTop="5dp"
+    android:orientation="vertical">
+
+    <ImageButton
+        android:id="@+id/say_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#00000000"
+        android:clickable="false"
+        android:src="@drawable/microphone1"
+        android:layout_marginTop="1dp"/>
+</LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/dict_layout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        
+        <TextView 
+            android:id="@+id/dict_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="字典"
+            android:textColor="@color/gray"/>
+        
+        <ImageButton 
+            android:id="@+id/dict_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#00000000"
+            android:clickable="false"
+            android:src="@drawable/dict1"
+            android:layout_marginTop="1dp"/>
+        </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/robot_layout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/robot_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="机器人"
+            android:textColor="@color/gray"/>
+
+        <ImageButton
+            android:id="@+id/robot_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#00000000"
+            android:clickable="false"
+            android:src="@drawable/robot1"
+            android:layout_marginTop="1dp"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <cn.jishuz.towhat.bean.Topbar
+        android:id="@+id/frame1_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></cn.jishuz.towhat.bean.Topbar>
+   <EditText
+        android:id="@+id/edit_test"
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/bg_edittext"
+        android:gravity="top|left"
+        android:hint="请输入你要翻译的文字..."
+        android:minHeight="145dp"
+        android:textSize="18sp" />
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:orientation="horizontal">
+        <Spinner 
+            android:id="@+id/select"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"/>
+        
+        <Button 
+            android:id="@+id/sub"
+            android:layout_marginLeft="35dp"
+            android:text="转换"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:background="@drawable/bg_go"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_result"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:gravity="top|left"
+        android:minHeight="145dp"
+        android:visibility="gone"
+        android:textSize="18sp" />
+</LinearLayout>
