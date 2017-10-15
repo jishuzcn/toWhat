@@ -92,7 +92,6 @@ public class Frame1 extends Fragment {
 			new Thread(askForYouDao).start();
 		}
 
-
 		sub.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {

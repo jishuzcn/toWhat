@@ -19,7 +19,6 @@ import android.widget.PopupWindow;
  */
 @TargetApi(Build.VERSION_CODES.HONEYCOMB)
 public class BasePopupWindow extends PopupWindow {
-
     private Context mContext;
     private float mShowAlpha = 0.88f;
     private Drawable mBackgroundDrawable;

@@ -14,7 +14,6 @@ import cn.jishuz.towhat.bean.ProgressTextUtils;
  */
 
 public class AudioRecoderDialog extends BasePopupWindow {
-
     private ImageView imageView;
     private TextView textView;
 

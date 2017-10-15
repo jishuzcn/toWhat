@@ -14,7 +14,6 @@ import cn.jishuz.towhat.bean.Topbar;
 
 @SuppressLint("NewApi")
 public class Frame2 extends Fragment {
-
 	private WebView webView;
 	private Topbar top;
 

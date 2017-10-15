@@ -114,5 +114,4 @@ public class Frame4 extends Fragment {
         mMsgs.setAdapter(mAdapter);
 //        mMsgs.setEnabled(false);
     }
-
 }

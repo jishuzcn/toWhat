@@ -26,7 +26,6 @@ import android.widget.Toast;
 import cn.jishuz.towhat.bean.SpeechRecognizerTool;
 
 public class MainActivity extends Activity implements View.OnClickListener,View.OnTouchListener,SpeechRecognizerTool.ResultsCallback,ActivityCompat.OnRequestPermissionsResultCallback {
-
         private LinearLayout trans_layout;
         private LinearLayout zhuan_layout;
         private LinearLayout dict_layout;

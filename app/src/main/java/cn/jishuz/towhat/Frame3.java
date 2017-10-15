@@ -35,7 +35,6 @@ import cn.jishuz.towhat.bean.Topbar;
 
 @SuppressLint("NewApi")
 public class Frame3 extends Fragment implements OnClickListener{
-
 	private Topbar top;
 	private EditText search_edit;
 	private ImageButton search_btn;
