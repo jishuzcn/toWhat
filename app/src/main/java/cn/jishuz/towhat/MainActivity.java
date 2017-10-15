@@ -310,42 +310,12 @@ public class MainActivity extends Activity implements View.OnClickListener, View
                 if (a >= 0) {
 //                    System.out.println("morning在字符串中的位置:"+a);
                     String ss = finalResult.substring(a + fanyi.length(), finalResult.length());// 去掉前面的翻译
-
                     resetColor();
                     setSelect(0, ss);
-                   /* FragmentManager manager = getFragmentManager();
-                    FragmentTransaction tra = manager.beginTransaction();
-                    hiddenFragment(tra);
-
-                    Frame1 f1 = new Frame1();
-                    Bundle bundle = new Bundle();
-                    bundle.putString("str", ss);
-                    f1.setArguments(bundle);
-                    //如果transaction  commit（）过  那么我们要重新得到transaction
-                    tra = manager.beginTransaction();
-                    tra.add(R.id.content, f1);
-                    trans_btn.setImageResource(R.drawable.tran2);
-                    trans_tv.setTextColor(Color.GREEN);
-                    tra.commit();*/
                 } else if (b >= 0) {
                     String ss = finalResult.substring(b + zd.length(), finalResult.length());// 去掉前面的翻译
-
                     resetColor();
                     setSelect(2, ss);
-                   /* FragmentManager manager = getFragmentManager();
-                    FragmentTransaction tra= manager.beginTransaction();
-                    hiddenFragment(tra);
-
-                    Frame3 f3 = new Frame3();
-                    Bundle bundle = new Bundle();
-                    bundle.putString("str", ss);
-                    f3.setArguments(bundle);
-                    //如果transaction  commit（）过  那么我们要重新得到transaction
-                    tra = manager.beginTransaction();
-                    tra.add(R.id.content, f3);
-                    dict_btn.setImageResource(R.drawable.dict2);
-                    dict_tv.setTextColor(Color.GREEN);
-                    tra.commit();*/
                 } else {
                     Toast.makeText(MainActivity.this, "请把口令说清楚,我没听清楚【" + finalResult + "】", Toast.LENGTH_LONG).show();
                 }
