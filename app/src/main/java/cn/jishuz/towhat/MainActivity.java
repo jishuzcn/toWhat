@@ -52,7 +52,6 @@ public class MainActivity extends Activity implements View.OnClickListener, View
     private long downT;
 
     private SpeechRecognizerTool mSpeechRecognizerTool = new SpeechRecognizerTool(this);
-    private static final String TAG = MainActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
